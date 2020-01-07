@@ -1,14 +1,14 @@
-@extends('layouts.base')
+@extends('layouts.app')
 @section('content')
     <section>
         <h1 class="text-center">Edit Report</h1>
     </section>
     <section class="my-5">
-        <a href="http://localhost/proyecTLaravel/public/expense_reports" class="btn btn-outline-info">Go to Back</a>
+        <a href="/expense_reports" class="btn btn-outline-info">Go to Back</a>
     </section>
     <section>
 
-        <form action="http://localhost/proyecTLaravel/public/expense_reports/{{$report->id}}" method="POST">
+        <form action="/expense_reports/{{$report->id}}" method="POST">
             @csrf
             @method('put')
             <div class="form-group">
